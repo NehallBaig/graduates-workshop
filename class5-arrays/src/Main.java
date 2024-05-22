@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -39,6 +41,19 @@ public class Main {
         for (int element : newArray) {
             System.out.print(element + " ");
         }
+
+        System.out.println();
+        System.out.println(Arrays.toString(newArray));
+        Object objectVariable = newArray;
+        if (objectVariable instanceof int[]) {
+            System.out.println("objectVariable is really an int array");
+        }
+
+        Object[] objectArray = new Object[3];
+        objectArray[0] = "Hello";
+        objectArray[1] = new StringBuilder("World");
+        objectArray[2] = newArray;
+
 
     }
 }
