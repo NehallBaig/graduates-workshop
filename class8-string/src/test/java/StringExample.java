@@ -36,7 +36,6 @@ public class StringExample {
         String modifiedText = elementText.replace("Domain", "Website");
         System.out.println("Modified Text: " + modifiedText);
 
-
         // Example startsWith and endsWith: Check if a string starts or ends with a specific prefix or suffix.
         String url = driver.getCurrentUrl();
         if(url.startsWith("https://")) {
@@ -44,10 +43,41 @@ public class StringExample {
         }
 
         // Example substring: Extract a portion of a string.
-
         String fullText = "Hello To Programming World ";//driver.findElement(By.id("elementId")).getText();
         String extractedText1 = fullText.substring(5, 10);
-        System.out.println("Extracted Text: " + extractedText);
+        System.out.println("Extracted Text: " + extractedText1);
+
+        //Example Replace and replaceAll: Replace occurrences of a character or substring with another character or substring.
+        String originalText2 = "This is some oldText";//driver.findElement(By.id("elementId")).getText();
+        String modifiedText2 = originalText2.replace("oldText", "newText");
+        System.out.println("Modified Text: " + modifiedText2);
+
+        //Example Split: Split a string into an array based on a delimiter.
+        String csvText = "value1,value2,value3";
+        String[] values = csvText.split(",");
+        for(String value : values) {
+            System.out.println("Value: " + value);
+        }
+
+        //Example trim: Remove leading and trailing whitespace.
+        String textWithWhitespace = "  some text  ";
+        String trimmedText = textWithWhitespace.trim();
+        System.out.println("Trimmed Text: '" + trimmedText + "'");
+
+        //Example toUpperCase and toLowerCase: Convert a string to uppercase or lowercase.
+        String mixedCaseText = "Some Text";
+        String lowerCaseText = mixedCaseText.toLowerCase();
+        System.out.println("Lowercase Text: " + lowerCaseText);
+
+        //Example length: Get the length of a string.
+        String text = "size5";//driver.findElement(By.id("elementId")).getText();
+        int length = text.length();
+        System.out.println("Text Length: " + length);
+
+        //Example valueOf: Convert other data types to a string.
+        int number = 123;
+        String numberAsString = String.valueOf(number);
+        System.out.println("Number as String: " + numberAsString);
 
         // Clean up
         driver.quit();
